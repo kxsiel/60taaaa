@@ -1,0 +1,109 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'UnifrakturCook', cursive;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'UnifrakturCook', cursive;
+    background-color: #6b6b6b;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    font-size: 32px;
+    width: 100%;
+    height: 100vh;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 85%;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 180px;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu__item {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#video-mobile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+}
+
+#video-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    #video-desktop {
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    #video-mobile {
+        display: none;
+    }
+}
+
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0b0b0b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loader__image {
+    width: 250px;
+}
